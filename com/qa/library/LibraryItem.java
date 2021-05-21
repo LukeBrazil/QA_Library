@@ -5,6 +5,7 @@ public abstract class LibraryItem {
 	private String name;
 	private int id;
 	private int condition;
+	private boolean isCheckedOut;
 	
 	public LibraryItem(String name, int condition) {
 		Random rand = new Random();
@@ -12,6 +13,7 @@ public abstract class LibraryItem {
 		this.name = name;
 		this.id = n;
 		this.condition = condition;
+		
 	}
 	
 	public String getName() {
@@ -36,6 +38,14 @@ public abstract class LibraryItem {
 	@Override
 	public String toString() {
 		return "LibraryItem [name=" + name + ", id=" + id + ", condition=" + condition + "]";
+	}
+
+	public boolean isCheckedOut() {
+		return isCheckedOut;
+	}
+
+	public void setCheckedOut(boolean isCheckedOut) {
+		this.isCheckedOut = isCheckedOut;
 	}
 	
 	

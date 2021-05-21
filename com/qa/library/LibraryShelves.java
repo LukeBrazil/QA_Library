@@ -16,7 +16,19 @@ public class LibraryShelves {
 	
 	public void showItemsOnShelves() {
 		for (int i = 0; i < myLibraryShelf.size(); i++) {
-			System.out.println(myLibraryShelf.get(i).toString());
+			LibraryItem e = (LibraryItem) myLibraryShelf.get(i);
+			if (!e.isCheckedOut()) { 
+				System.out.println(e.toString());
+			}
+			
+		}
+	}
+	
+	public void removeItem(Object obj) {
+		for(int i = 0; i < myLibraryShelf.size(); i++) {
+			if(myLibraryShelf.get(i).equals(obj)) {
+				myLibraryShelf.remove(i);
+			}
 		}
 	}
 

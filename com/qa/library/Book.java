@@ -35,8 +35,12 @@ public class Book extends LibraryItem{
 
 	@Override
 	public String toString() {
-		return "Book [pages=" + pages + ", author=" + author + ", getName()=" + getName() + ", getId()=" + getId()
-				+ ", getCondition()=" + getCondition() + "]";
+		return "Book [pages=" + pages + ", author=" + author + ", getPages()=" + getPages() + ", getAuthor()="
+				+ getAuthor() + ", getName()=" + getName() + ", getId()=" + getId() + ", getCondition()="
+				+ getCondition() + ", isCheckedOut()=" + isCheckedOut() + "]";
 	}
+
+
+	
 
 }
